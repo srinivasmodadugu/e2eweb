@@ -1,1 +1,7 @@
-14:21:58.264 [main] INFO  resources.base - page loaded
+16:59:24.337 [main] INFO  resources.base - page loaded
+16:59:24.767 [main] INFO  resources.base - clicked signin
+16:59:28.289 [main] INFO  resources.base - page loaded
+16:59:28.849 [main] INFO  resources.base - clicked signin
+17:13:12.945 [main] INFO  resources.base - driver is initializ
+17:13:14.546 [main] INFO  resources.base - page loaded
+17:13:15.397 [main] INFO  resources.base - clicked signin

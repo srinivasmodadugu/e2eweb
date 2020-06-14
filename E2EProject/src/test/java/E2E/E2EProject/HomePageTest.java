@@ -27,7 +27,7 @@ public class HomePageTest extends base {
 	}
 	
 	@Test(dataProvider = "getData")
-	public void basePageNavigation(String email, String password, String text) throws IOException {
+	public void successfullLogin(String email, String password, String text) throws IOException {
 		
 		driver.get(prop.getProperty("url"));
 		log.info("page loaded");
@@ -46,18 +46,23 @@ public class HomePageTest extends base {
 		System.out.println(text);
 		
 	}
+	
+	@Test(dataProvider = "getData")
+	public void selectItem(String email, String password, String text) throws IOException {
+		
+	//successfullLogin(email,password,text);
+				
+	}
 
+	
+	
+	
 	@DataProvider
 	public Object[][] getData() {
-		Object[][] data = new Object[2][3];
-		data[0][0] = "modadugu.srinivas@gmail.com";
-		data[0][1] = "Nivas@123";
+		Object[][] data = new Object[1][3];
+		data[0][0] = "sri666@yahoo.com";
+		data[0][1] = "Laks@123";
 		data[0][2] = "Successful login";
-
-		data[1][0] = "test@gmail.com";
-		data[1][1] = "password";
-		data[1][2] = "unsuccessful login";
-		
 		return data;
 	
 	}

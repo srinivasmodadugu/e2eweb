@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="E2E.E2EProject.LaunchPageTest">
+      <class name="E2E.E2EProject.HomePageTest">
         <methods>
           <include name="initial"/>
           <include name="tearDown"/>
-          <include name="basePageNavigation" invocation-numbers="0 1"/>
+          <include name="successfullLogin" invocation-numbers="1"/>
         </methods>
-      </class> <!-- E2E.E2EProject.LaunchPageTest -->
+      </class> <!-- E2E.E2EProject.HomePageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

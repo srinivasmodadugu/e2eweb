@@ -9,7 +9,7 @@
     <classes>
       
       <class name="E2E.E2EProject.HomePageTest"/>
-      <class name="E2E.E2EProject.LaunchPageTest"/>
+      <!-- <class name="E2E.E2EProject.LaunchPageTest"/>-->
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
