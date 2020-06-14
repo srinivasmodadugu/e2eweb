@@ -27,49 +27,31 @@ public class base {
 	public static final String URL = "http://" + USERNAME + ":" + ACCESS_KEY + "@ondemand.saucelabs.com:80/wd/hub";
 	
 public WebDriver initializeDriver() throws IOException {
-	
-	  
-	/* public static final  String USERNAME = "sri666";
-	  public static final  String ACCESS_KEY = "4fd8d29e-e5e1-41e1-b366-07b3005291e6";
-	
-	  public static final String URL = "http://" + USERNAME + ":" + ACCESS_KEY + "@ondemand.saucelabs.com:80/wd/hub";
-	  //https://ondemand.us-west-1.saucelabs.com:443/wd/hub
-
-
-	public static void main(String[] args) throws MalformedURLException {
-
-	// TODO Auto-generated method stub
-
-
-
-	DesiredCapabilities caps = DesiredCapabilities.chrome();
-
-	caps.setCapability("platform", "Windows 7");
-
-	caps.setCapability("version", "51.0");
-
-	WebDriver driver=new RemoteWebDriver(new URL(URL), caps);
-*/
+		
 	
 	
 	System.out.println("initial driver page");
 	prop=new Properties();
-	FileInputStream fis=new FileInputStream("C:\\Sri\\Automation\\E2EProject\\src\\main\\java\\resources\\data.properties");
+	FileInputStream fis=new FileInputStream("C:\\Sri\\git\\e2eweb\\E2EProject\\src\\main\\java\\resources\\data.properties");
 	prop.load(fis);
 	String browserName=prop.getProperty("browser");
+	String env=prop.getProperty("environment");
 	System.out.println(browserName);
 
 
 	
-	if(browserName.equals("chrome"))
+	if((env.equals("saucelabs"))&& (browserName.equals("chrome")) )
 	{
 		DesiredCapabilities caps = DesiredCapabilities.chrome();
 		caps.setCapability("platform", "Windows 7");
 		caps.setCapability("version", "51.0");
 		driver=new RemoteWebDriver(new URL(URL), caps);
+	}
 
-		//System.setProperty("webdriver.chrome.driver", "C:\\work\\chromedriver.exe");
-		 //driver=new ChromeDriver();
+		else if((env.equals("local"))&& (browserName.equals("chrome")) )
+		{
+		System.setProperty("webdriver.chrome.driver", "C:\\work\\chromedriver.exe");
+		driver=new ChromeDriver();
 	}
 	else if (browserName.equals("IE"))
 	{
